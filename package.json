@@ -1,0 +1,39 @@
+{
+  "name": "mirea-latex-extension",
+  "displayName": "Mirea Creator",
+  "description": "Create a LaTeX template",
+  "version": "1.0.0",
+  "publisher": "Alexander Smirnov",
+  "engines": {
+      "vscode": "^1.60.0"
+  },
+  "categories": [
+      "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.createNewReport"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+      "commands": [
+          {
+              "command": "extension.createNewReport",
+              "title": "Создать новый отчёт"
+          }
+      ]
+  },
+  "scripts": {
+      "compile": "tsc -p .",
+      "watch": "tsc -watch -p .",
+      "prepublishOnly": "npm run compile",
+      "vscode:prepublish": "npm run compile",
+      "clean": "rimraf out"
+  },
+  "devDependencies": {
+      "@types/node": "^16.7.11",
+      "rimraf": "^3.0.2",
+      "typescript": "^4.4.4",
+      "vscode-test": "^1.6.0"
+  }
+}
+
